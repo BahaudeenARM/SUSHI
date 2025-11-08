@@ -1,0 +1,3 @@
+[submodule "fast-reid"]
+	path = fast-reid
+	url = https://github.com/BahaudeenARM/fast-reid.git

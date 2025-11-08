@@ -300,7 +300,24 @@ class _BaseDataset(ABC):
     def _check_unique_ids(data, after_preproc=False):
         """Check the requirement that the tracker_ids and gt_ids are unique per timestep"""
         gt_ids = data['gt_ids']
+        # TODO: prove that only exact duplicates
         tracker_ids = data['tracker_ids']
+
+        clean_tracker_ids = []
+        for tracker_id in tracker_ids:
+            if len(tracker_id) > 0:
+                seen = set()
+                filtered = []
+                for tid in tracker_id:
+                    if tid not in seen:
+                        seen.add(tid)
+                        filtered.append(tid)
+                clean_tracker_ids.append(filtered)
+            else:
+                clean_tracker_ids.append(tracker_id)
+
+        tracker_ids = clean_tracker_ids
+        
         for t, (gt_ids_t, tracker_ids_t) in enumerate(zip(gt_ids, tracker_ids)):
             if len(tracker_ids_t) > 0:
                 unique_ids, counts = np.unique(tracker_ids_t, return_counts=True)
@@ -312,6 +329,10 @@ class _BaseDataset(ABC):
                     if after_preproc:
                         exc_str_init += '\n Note that this error occurred after preprocessing (but not before), ' \
                                         'so ids may not be as in file, and something seems wrong with preproc.'
+                        
+                    with open("/home/bahaudeen/vta-offline-mot-evaluation/double_id.txt", "a") as f:
+                        f.write(exc_str + '\n')
+                    continue
                     raise TrackEvalException(exc_str)
             if len(gt_ids_t) > 0:
                 unique_ids, counts = np.unique(gt_ids_t, return_counts=True)

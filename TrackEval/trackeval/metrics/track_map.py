@@ -220,8 +220,8 @@ class TrackMAP(_BaseMetric):
             tps = np.logical_and(dt_m != -1, np.logical_not(dt_ig))
             fps = np.logical_and(dt_m == -1, np.logical_not(dt_ig))
 
-            tp_sum = np.cumsum(tps, axis=1).astype(dtype=np.float)
-            fp_sum = np.cumsum(fps, axis=1).astype(dtype=np.float)
+            tp_sum = np.cumsum(tps, axis=1).astype(dtype=float)
+            fp_sum = np.cumsum(fps, axis=1).astype(dtype=float)
 
             for iou_thr_idx, (tp, fp) in enumerate(zip(tp_sum, fp_sum)):
                 tp = np.array(tp)
@@ -259,8 +259,8 @@ class TrackMAP(_BaseMetric):
 
         # compute the precision and recall averages for the respective alpha thresholds and ignore masks
         for lbl in self.lbls:
-            res['AP_' + lbl] = np.zeros((len(self.array_labels)), dtype=np.float)
-            res['AR_' + lbl] = np.zeros((len(self.array_labels)), dtype=np.float)
+            res['AP_' + lbl] = np.zeros((len(self.array_labels)), dtype=float)
+            res['AR_' + lbl] = np.zeros((len(self.array_labels)), dtype=float)
 
         for a_id, alpha in enumerate(self.array_labels):
             for lbl_idx, lbl in enumerate(self.lbls):
