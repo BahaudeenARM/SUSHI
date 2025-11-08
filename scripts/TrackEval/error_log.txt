@@ -1,0 +1,322 @@
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_16:38:15.785912/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 191, in eval_sequence
+    raw_data = dataset.get_raw_seq_data(tracker, seq)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/_base_dataset.py", line 92, in get_raw_seq_data
+    raw_gt_data = self._load_raw_file(tracker, seq, is_gt=True)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 228, in _load_raw_file
+    time_data = np.asarray(read_data[time_key], dtype=np.float)
+  File "/home/bahaudeen/.pyenv/versions/test39/lib/python3.9/site-packages/numpy/__init__.py", line 394, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_16:41:55.641033/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 195, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 359, in get_preprocessed_seq_data
+    to_remove_tracker = np.array([], np.int)
+  File "/home/bahaudeen/.pyenv/versions/test39/lib/python3.9/site-packages/numpy/__init__.py", line 394, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_16:45:47.281935/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 195, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 359, in get_preprocessed_seq_data
+    to_remove_tracker = np.array([], np.int)
+  File "/home/bahaudeen/.pyenv/versions/test39/lib/python3.9/site-packages/numpy/__init__.py", line 394, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'int'.
+`np.int` was a deprecated alias for the builtin `int`. To avoid this error in existing code, use `int` by itself. Doing this will not modify any behavior and is safe. When replacing `np.int`, you may wish to use e.g. `np.int64` or `np.int32` to specify the precision. If you wish to review your current use, check the release note link for additional information.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_16:50:47.661085/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 195, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 323, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_16:55:21.075742/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 195, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 323, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_17:00:40.621630/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 195, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 323, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_17:04:40.344442/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 195, in eval_sequence
+    data = dataset.get_preprocessed_seq_data(raw_data, cls)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/mot_challenge_2d_box.py", line 323, in get_preprocessed_seq_data
+    self._check_unique_ids(raw_data)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/datasets/_base_dataset.py", line 315, in _check_unique_ids
+    raise TrackEvalException(exc_str)
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+trackeval.utils.TrackEvalException: Tracker predicts the same ID more than once in a single timestep (seq: MOT17-09-DPM, frame: 513, ids: 7)
+
+
+
+
+
+MotChallenge2DBox
+/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/output/experiments/example_mot17_training_fastreid_msmt_BOT_R50_ibn_11-07_17:08:30.871339/test
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 197, in eval_sequence
+    seq_res[cls][met_name] = metric.eval_sequence(data)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/_timing.py", line 64, in wrap
+    return f(*args, **kw)
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/metrics/hota.py", line 31, in eval_sequence
+    res[field] = np.zeros((len(self.array_labels)), dtype=np.float)
+  File "/home/bahaudeen/.pyenv/versions/test39/lib/python3.9/site-packages/numpy/__init__.py", line 394, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/bahaudeen/vta-offline-mot-evaluation/tracker_frameworks/SUSHI/scripts/TrackEval/trackeval/eval.py", line 81, in evaluate
+    results = pool.map(_eval_sequence, seq_list)
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/home/bahaudeen/.pyenv/versions/3.9.23/lib/python3.9/multiprocessing/pool.py", line 771, in get
+    raise self._value
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+
+
+
+
+
