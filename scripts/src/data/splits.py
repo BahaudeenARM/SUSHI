@@ -10,7 +10,7 @@ def get_seqs_from_splits(data_path, train_split=None, val_split=None, test_split
     # MOT17 Dets
     mot17_dets = ('SDP', 'FRCNN', 'DPM')
 
-
+    _SPLITS['vta-offline-mot-test'] = {'VTAOfflineMOTEval/test': ['det']}
     # Full MOT17-Train
     _SPLITS['mot17-train-all'] = {'MOT17/train': [f'MOT17-{seq_num:02}-{det}' for seq_num in (2, 4, 5, 9, 10, 11, 13) for det in mot17_dets]}
     _SPLITS['mot17-train-split1'] = {'MOT17/train': [f'MOT17-{seq_num:02}-{det}' for seq_num in (4, 5, 9, 11) for det in mot17_dets]}

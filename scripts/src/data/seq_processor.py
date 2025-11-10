@@ -33,6 +33,8 @@ _ENSURE_BOX_IN_FRAME = {'MOT': False, 'MOT_GT': False, 'MOT_DANCETRACK': False, 
 
 # Available sequences
 _SEQ_TYPES = {}
+
+_SEQ_TYPES['det'] = 'MOT'
 # --------- MOT17 ---------
 mot17_seqs = [f'MOT17-{seq_num:02}-{det}{extra_str}' for seq_num in (2, 4, 5, 9, 10, 11, 13) for det in ('DPM', 'SDP', 'FRCNN', 'GT') for extra_str in ('', '-train-half', '-val-half')]
 mot17_seqs += [f'MOT17-{seq_num:02}-{det}' for seq_num in (1, 3, 6, 7, 8, 12, 14) for det in ('DPM', 'SDP', 'FRCNN')]
