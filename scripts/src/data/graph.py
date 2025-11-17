@@ -235,7 +235,7 @@ class HierarchicalGraph(Data):
 
         
         if self.curr_depth >0 and config.do_motion:
-            motion_features = self.get_motion_features(max_length = config.motion_max_length[self.curr_depth - 1],
+            motion_features = self.get_motion_features(max_length = config.motion_max_length[int(self.curr_depth - 1)],
                                                        interpolate =config.interpolate_motion)
             fwrd_vel = torch.zeros(((~motion_features['x_ignore_traj']).sum(), 4), device = x_node.device, dtype=torch.float)
             bwrd_vel = fwrd_vel.clone()
@@ -282,13 +282,13 @@ class HierarchicalGraph(Data):
         motion_feats = {'motion_giou': curr_graph.pruning_score}
         
         edge_feats_to_use_ = ['secs_time_dists']
-        if config.mpn_use_pos_edge[self.curr_depth]:
+        if config.mpn_use_pos_edge[int(self.curr_depth)]:
             edge_feats_to_use_ += ['norm_feet_x_dists', 'norm_feet_y_dists', 'bb_height_dists', 'bb_width_dists']
         
-        if config.mpn_use_reid_edge[self.curr_depth]:
+        if config.mpn_use_reid_edge[int(self.curr_depth)]:
             edge_feats_to_use_ += ['emb_dists']
 
-        if config.mpn_use_motion[self.curr_depth]:
+        if config.mpn_use_motion[int(self.curr_depth)]:
             edge_feats_to_use_ += ['motion_giou']
                         
         reid_sim_fn = F.pairwise_distance if config.edge_sim_fn == 'l2' else lambda x, y: 2 - F.cosine_similarity(x, y)

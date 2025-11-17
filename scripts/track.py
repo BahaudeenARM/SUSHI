@@ -5,8 +5,7 @@ import os.path as osp
 from TrackEval.scripts.run_mot_challenge import evaluate_mot17
 from configs.config import get_arguments
 
-def process_detections_with_SUSHI(config_list, output_folder_path):
-    config = get_arguments(config_list)
+def process_detections_with_SUSHI(config, output_folder_path):
     seqs, splits = get_seqs_from_splits(data_path=config.data_path, test_split=config.test_splits[0])
 
     # Initialize the tracker

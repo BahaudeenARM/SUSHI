@@ -310,13 +310,13 @@ class HICLTracker:
 
         fwrd_motion_pred = motion_model(x_motion=batch.x_fwrd_motion, 
                                         x_last_pos=batch.x_center_end[~batch.x_ignore_traj],
-                                        pred_length=self.config.motion_pred_length[curr_depth - 1],
+                                        pred_length=self.config.motion_pred_length[int(curr_depth - 1)],
                                         linear_center_only=self.config.linear_center_only
                                         )
         
         bwrd_motion_pred = motion_model(x_motion=batch.x_bwrd_motion, 
                                         x_last_pos=batch.x_center_start[~batch.x_ignore_traj],
-                                        pred_length=self.config.motion_pred_length[curr_depth - 1],
+                                        pred_length=self.config.motion_pred_length[int(curr_depth - 1)],
                                         linear_center_only=self.config.linear_center_only
                                         )            
 

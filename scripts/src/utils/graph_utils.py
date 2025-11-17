@@ -63,7 +63,7 @@ def prune_edges(edge_ixs, node_frames, node_reids, top_k_nns, depth, node_feets,
     Given a set of time-valid edge connections, keep only the Top K-NN neighbors for each node,
     based on a computed similarity score.
     """
-    pruning_score = compute_pruning_score(x_reid = node_reids, x_frame = node_frames, x_feet = node_feets, edge_ixs = edge_ixs, pruning_method = pruning_method[depth], 
+    pruning_score = compute_pruning_score(x_reid = node_reids, x_frame = node_frames, x_feet = node_feets, edge_ixs = edge_ixs, pruning_method = pruning_method[int(depth)], 
                                           graph_pruning_score=graph_pruning_score, reid_sim_fn=reid_sim_fn)
     edge_ixs, edge_mask = find_nearest_neighbor_connections(edge_ixs=edge_ixs, pwise_dist=pruning_score, top_k_nns=top_k_nns, num_nodes = node_reids.shape[0])
 
